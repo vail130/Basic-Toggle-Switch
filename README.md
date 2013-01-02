@@ -4,9 +4,13 @@
 
 This repository walks through the process of creating a jQuery plugin that transforms a DOM element into a pre-styled toggle switch.
 
+## Project Page
+
+Read the API documentation for the plugin and see live examples at <a href='http://vail130.github.com/Basic-Toggle-Switch/' target='_blank'>http://vail130.github.com/Basic-Toggle-Switch/</a>.
+
 ## Determining Structure and Style of the Switch
 
-For quick prototyping of some HTML and CSS, I like to use a site like [JSBin](http://jsbin.com) and [jsFiddle](http://jsfiddle.net). I settled on the following HTML:
+For quick prototyping of some HTML and CSS, I like to use a site like <a href='http://jsbin.com' target='_blank'>JSBin</a> and <a href='http://jsfiddle.net' target='_blank'>jsFiddle</a>. I settled on the following HTML:
 
 ```html
 <a href='#' class='bts-switch'>
@@ -56,7 +60,7 @@ span {
 
 ## Structuring the jQuery Plugin Code
 
-The jQuery website provides some important [Plugin Authoring Guidelines](http://docs.jquery.com/Plugins/Authoring) that I would urge you to read or at least skim through before starting to write the code. There is a summary of best practices at the bottom of the page. Based on these guidelines and the code template provided, the following are the main programming considerations for this plugin:
+The jQuery website provides some important <a href='http://docs.jquery.com/Plugins/Authoring' target='_blank'>Plugin Authoring Guidelines</a> that I would urge you to read or at least skim through before starting to write the code. There is a summary of best practices at the bottom of the page. Based on these guidelines and the code template provided, the following are the main programming considerations for this plugin:
 
 * Placing the plugin's code in a closure
 * Defining the plugin's API methods
