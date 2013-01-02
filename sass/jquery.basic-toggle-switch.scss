@@ -1,0 +1,54 @@
+.bts-switch {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  box-shadow: 0 0 5px -1px black inset;
+  border-radius: 5px;
+  background-color: #ac3125;
+  
+  &.bts-on {
+    background-color: #155d22;
+    
+    .bts-toggle {
+      right: none;
+      left: 2px;
+    }
+  }
+  
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .bts-label {
+    display: inline-block;
+    position: relative;
+    padding: 5px 8px;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: "Helvetica Neue", Helvetica, Arial, Sans-serif;
+    color: #eee;
+    text-shadow: 1px 1px 0 #222;
+    
+    &.bts-label-off {
+      float: left;
+    }
+    
+    &.bts-label-on {
+      float: right;
+    }
+  }
+  
+  .bts-toggle {
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 46%;
+    height: 24px;
+    background-color: #eee;
+    border-radius: 3px;
+    box-shadow: 0 0 5px -2px black, 0 -30px 35px -40px black inset;
+  }
+}
