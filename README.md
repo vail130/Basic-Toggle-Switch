@@ -2,7 +2,7 @@
 
 ## tl;dr
 
-This repository walks through the process of creating a jQuery plugin that transforms a DOM element into a pre-styled toggle switch.
+This repository walks through the process of creating a jQuery plugin that transforms a DOM element into a pre-styled toggle switch. See other project samples and tutorials at <a href='http://vailgold.com' target='_blank'>http://vailgold.com</a>.
 
 ## Project Page
 
