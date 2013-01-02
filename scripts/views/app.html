@@ -1,0 +1,80 @@
+
+<div class='container'>
+  <h1>jQuery Plugin - Basic Toggle Switch</h1>
+  
+  <h3>Standard Initialization</h3>
+  <pre>&lt;span class='switch'&gt;&lt;/span&gt;</pre>
+  <pre>var $switch = $('.switch').basicToggleSwitch();</pre>
+  <span class='switch'></span>
+  
+  <h3>Active (data-state='on')</h3>
+  <pre>&lt;span class='switch' data-state='on'&gt;&lt;/span&gt;</pre>
+  <pre>var $switch = $('.switch').basicToggleSwitch();</pre>
+  <span class='switch' data-state='on'></span>
+  
+  <h3>Referencing the Plugin</h3>
+  <p>Save a reference to the element that the initializing method returns for later use. The original
+    HTML will always be replaced by the same switch template, so selecting by attributes from the
+    original HTML will not work.</p>
+  
+  <h3>State</h3>
+  <p>Initializing the plugin on a DOM element returns the newly created jQuery selection of just the
+    one object, on which you can call the plugin method with 'state' as the first argument to get a
+    string representation of the switch's state: 'on' or 'off'.</p>
+  <pre>var state = $switch.basicToggleSwitch('state');
+['on', 'off'].indexOf(state) > -1 // true</pre>
+  
+  <p>You can call the plugin method with 'active' as the first argument to get a boolean representation
+    of the switch's state: true or false.</p>
+  <pre>var active = $switch.basicToggleSwitch('active');
+[true, false].indexOf(active) > -1 // true</pre>
+  
+  <h3>Events</h3>
+  <pre>var $switch = $('.switch').basicToggleSwitch({
+    on: function() {
+      $('.switch-output').html("<%- "<span class='span3' style='color: green;'>Switch is on</span>" %>");
+    },
+    off: function() {
+      $('.switch-output').html("<%- "<span class='span3' style='color: red;'>Switch is on</span>" %>");
+    },
+    toggle: function() {
+      $('.switch-output').append("<%- "<span class='span3' style='color: yellow;'>Switch is toggled.</span>" %>");
+    }
+  });</pre>
+  <div class='row'>
+    <span class='span3'>
+      <span class='event-switch'></span>
+    </span>
+    <span class='span7 switch-output'></span>
+  </div>
+  
+  <h3>Multiple Switches on a Page</h3>
+  <p>To create multiple switches on a page, only call basicToggleSwitch() on selections with a single element.
+    Use jQuery's each() iterator to create multiple switches with one selection.</p>
+  <pre>&lt;span class='switch' data-state='on'&gt;&lt;/span&gt;
+&lt;span class='switch' data-state='on'&gt;&lt;/span&gt;
+&lt;span class='switch'&gt;&lt;/span&gt;</pre>
+  <pre>var switchArray = [];
+$('.switch').each(function() {
+  switchArray.push($(this).basicToggleSwitch());
+});</pre>
+  <div class='row'>
+    <span class='span3'>
+      <span class='switch' data-state='on'></span>
+    </span>
+    <span class='span3'>
+      <span class='switch' data-state='on'></span>
+    </span>
+    <span class='span3'>
+      <span class='switch'></span>
+    </span>
+  </div>
+  
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  
+</div>
